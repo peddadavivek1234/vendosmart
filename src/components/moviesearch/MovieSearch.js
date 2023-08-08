@@ -18,7 +18,8 @@ const MovieSearch = () => {
         },
       });
 
-      setMovies(response.data.results);
+      const sortedMovies = response.data.results.sort((a, b) => b.vote_average - a.vote_average);
+      setMovies(sortedMovies);
     } catch (error) {
       console.error("Error fetching data: ", error);
       setMovies([]);
@@ -44,7 +45,7 @@ const MovieSearch = () => {
           type="text"
           value={query}
           onChange={(e) => setQuery(e.target.value)}
-          onKeyPress={handleKeyPress} 
+          onKeyPress={handleKeyPress}
           placeholder="Enter movie name"
         />
         <button className="Search" onClick={handleSearch}>Search!</button>
