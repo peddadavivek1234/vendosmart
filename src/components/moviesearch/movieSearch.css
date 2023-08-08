@@ -1,0 +1,75 @@
+.moviesearch{
+    background-color: #f9f9f9;
+}
+.searchbar{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding-left: 20px;
+}
+
+.search-input{
+    width: 500px;
+    height: 30px;
+    border-radius: 20px;
+    margin-left: 20px;
+}
+
+.Search{
+    border-radius: 50px;
+    height: 30px;
+    width: 80px;
+    background-color: #000;
+    color: white;
+    margin-left: 20px;
+}
+
+.movie-list {
+    margin-top: 20px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  
+  .movie-card {
+    width: 45%;
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    margin-left: 420px;
+  }
+  
+  .movie-image {
+    flex: 1;
+  }
+  
+  .movie-image img {
+    width: 200px;
+    height: 300px;
+    border-radius: 6px;
+  }
+  
+  .movie-details {
+    flex: start;
+  }
+  
+  .movie-details h3 {
+    flex: start;
+  }
+  
+  .movie-details p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 12px;
+  }
+  
+  .not-found{
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
