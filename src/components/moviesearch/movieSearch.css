@@ -73,3 +73,45 @@
     align-items: center;
     justify-content: center;
   }
+
+  .pages{
+    width: 5%;
+    height: 10%;
+    margin-bottom: 10px;
+    margin-left: 10px;
+  }
+  .pages:hover{
+    background-color: skyblue;
+  }
+
+.sort-options {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    margin-left: 20px;
+  }
+  
+  .sort-rating {
+    margin-right: 10px;
+  }
+  
+  .sort-options button {
+    padding: 8px 12px;
+    font-size: 14px;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    color: #555;
+    transition: background-color 0.1s, color 0.1s;
+  }
+  
+  .sort-options button.active {
+    background-color: #007bff;
+    color: #fff;
+  }
+  
+  .sort-options button:hover {
+    background-color: #007bff;
+    color: #fff;
+  }
+  
