@@ -29,19 +29,26 @@ const MovieSearch = () => {
     searchMovies();
   };
 
+  const handleKeyPress = (e) => {
+    if (e.key === "Enter") {
+      searchMovies();
+    }
+  };
+
   return (
     <div className="moviesearch">
-        <div className="searchbar">
-            <h3>MOVIE NAME</h3>
-            <input
-                className="search-input"
-                type="text"
-                value={query}
-                onChange={(e) => setQuery(e.target.value)}
-                placeholder="Enter movie name"
-            />
-            <button className="Search" onClick={handleSearch}>Search!</button>
-        </div>
+      <div className="searchbar">
+        <h3>MOVIE NAME</h3>
+        <input
+          className="search-input"
+          type="text"
+          value={query}
+          onChange={(e) => setQuery(e.target.value)}
+          onKeyPress={handleKeyPress} 
+          placeholder="Enter movie name"
+        />
+        <button className="Search" onClick={handleSearch}>Search!</button>
+      </div>
 
       {movies.length > 0 ? (
         <div className="movie-list">
@@ -55,12 +62,12 @@ const MovieSearch = () => {
                   />
                 </div>
                 <div>
-                    <div className="movie-details">
-                        <h3 >{movie.title}</h3>
-                        <p>RELEASE DATE:  {movie.release_date}</p>
-                        <p>RATING{movie.vote_average.toFixed(1)}</p>
-                    </div>
-                    <p>{movie.overview}</p>
+                  <div className="movie-details">
+                    <h3>{movie.title}</h3>
+                    <p>RELEASE DATE: {movie.release_date}</p>
+                    <p>RATING: {movie.vote_average.toFixed(1)}</p>
+                  </div>
+                  <p>{movie.overview}</p>
                 </div>
               </div>
             ))}
